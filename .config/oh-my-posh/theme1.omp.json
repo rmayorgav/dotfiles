@@ -1,0 +1,68 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "version": 2,
+  "blocks": [
+    {
+      "type": "prompt",
+      "alignment": "left",
+      "segments": [
+        {
+          "type": "session",
+          "style": "plain",
+          "foreground": "lightGreen",
+          "template": "[{{ .UserName }}@{{ .HostName }}]",
+          "properties": {}
+        },
+        {
+          "type": "path",
+          "style": "plain",
+          "foreground": "lightWhite",
+          "template": " [{{ .Path }}]",
+          "properties": {
+            "style": "agnoster"
+          }
+        },
+        {
+          "type": "project",
+          "style": "plain",
+          "template": " [{{ .Type }}]"
+        },
+        {
+          "type": "git",
+          "style": "plain",
+          "foreground": "lightYellow",
+          "template": " ({{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} \uF044 {{ .Working.String }}{{ end }}{{ if and (.Staging.Changed) (.Working.Changed) }} |{{ end }}{{ if .Staging.Changed }} \uF046 {{ .Staging.String }}{{ end }})",
+          "properties": {
+            "branch_icon": ""
+          }
+        }
+      ]
+    },
+    {
+      "type": "prompt",
+      "alignment": "right",
+      "segments": [
+        {
+          "type": "executiontime",
+          "style": "plain",
+          "template": " ({{.FormattedMs}})",
+          "properties": {
+            "always_enabled": true
+          }
+        }
+      ]
+    },
+    {
+      "type": "prompt",
+      "alignment": "left",
+      "newline": true,
+      "segments": [
+        {
+          "style": "plain",
+          "type": "text",
+          "template": "> "
+        }
+      ]
+    }
+  ]
+}
