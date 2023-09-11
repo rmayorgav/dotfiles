@@ -7,6 +7,11 @@
       "alignment": "left",
       "segments": [
         {
+          "type": "shell",
+          "style": "plain",
+          "template": "({{ .Name }}) "
+        },
+        {
           "type": "session",
           "style": "plain",
           "foreground": "lightGreen",
