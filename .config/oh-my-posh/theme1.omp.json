@@ -27,9 +27,10 @@
           "type": "git",
           "style": "plain",
           "foreground": "lightYellow",
-          "template": " ({{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} \uF044 {{ .Working.String }}{{ end }}{{ if and (.Staging.Changed) (.Working.Changed) }} |{{ end }}{{ if .Staging.Changed }} \uF046 {{ .Staging.String }}{{ end }})",
+          "template": " ({{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} w {{ .Working.String }}{{ end }}{{ if and (.Staging.Changed) (.Working.Changed) }} |{{ end }}{{ if .Staging.Changed }} s {{ .Staging.String }}{{ end }})",
           "properties": {
-            "branch_icon": ""
+            "branch_icon": "",
+            "fetch_status": true
           }
         },
         {
