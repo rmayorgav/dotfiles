@@ -53,8 +53,7 @@
           "foreground": "cyan",
           "template": "[{{ .Name }}] ",
           "properties": {
-            "mapped_shell_names" :{
-            }
+            "mapped_shell_names": {}
           }
         },
         {
