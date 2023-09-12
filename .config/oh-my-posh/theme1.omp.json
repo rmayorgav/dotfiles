@@ -24,11 +24,6 @@
           }
         },
         {
-          "type": "project",
-          "style": "plain",
-          "template": " [{{ .Type }}]"
-        },
-        {
           "type": "git",
           "style": "plain",
           "foreground": "lightYellow",
