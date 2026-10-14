@@ -1,0 +1,1 @@
+$E[32m%USERNAME%@%COMPUTERNAME% $E[33m$P$E[0m$_$G 
